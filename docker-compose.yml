@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  aws-ecs-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aws-ecs-dashboard
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "com.example.description=AWS ECS Monitoring Dashboard"
+      - "com.example.version=1.0"

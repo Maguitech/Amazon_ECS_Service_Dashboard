@@ -1,0 +1,3 @@
+@echo off
+echo Iniciando AWS ECS Dashboard...
+npm run dev
