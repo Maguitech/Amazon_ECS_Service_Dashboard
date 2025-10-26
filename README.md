@@ -18,7 +18,7 @@
 
 ## 📋 Prerequisites
 
-- Node.js 18+ and npm
+- Node.js 22+ and npm
 - AWS Account with appropriate IAM permissions
 
 ## 🚀 Quick Start (Windows)
@@ -188,4 +188,4 @@ Contributions are welcome! This dashboard is designed for:
 
 ---
 
-**Made with ❤️ for AWS ECS monitoring**
+**Made with ❤️ for the comunity**
